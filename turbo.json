@@ -2,10 +2,47 @@
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
   "tasks": {
-    "check-types": {},
+    "check-types": {
+      "inputs": [
+        "**/*.{js,mjs,ts,tsx,astro}",
+        "!node_modules/**",
+        "!dist/**",
+        "!.turbo/**"
+      ]
+    },
     "lint": {
+      "inputs": [
+        "**/*.{js,mjs,ts,tsx,astro}",
+        "!node_modules/**",
+        "!dist/**",
+        "!.turbo/**"
+      ],
       "outputs": [".eslintcache"]
     },
-    "format": {}
+    "lint:fix": {
+      "inputs": [
+        "**/*.{js,mjs,ts,tsx,astro}",
+        "!node_modules/**",
+        "!dist/**",
+        "!.turbo/**"
+      ],
+      "outputs": [".eslintcache"]
+    },
+    "format": {
+      "inputs": [
+        "**/*.{html,css,js,mjs,ts,tsx,astro,json,md,mdx,yml,yaml}",
+        "!node_modules/**",
+        "!dist/**",
+        "!.turbo/**"
+      ]
+    },
+    "format:check": {
+      "inputs": [
+        "**/*.{html,css,js,mjs,ts,tsx,astro,json,md,mdx,yml,yaml}",
+        "!node_modules/**",
+        "!dist/**",
+        "!.turbo/**"
+      ]
+    }
   }
 }

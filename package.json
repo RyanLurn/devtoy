@@ -8,10 +8,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",
+    "format:check": "prettier . --check",
     "check-types": "astro check",
     "lint": "eslint --cache",
     "lint:fix": "eslint --cache --fix",
-    "check": "turbo run check-types lint format"
+    "check": "turbo run check-types lint format:check",
+    "fix": "turbo run lint:fix format"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
