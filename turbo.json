@@ -1,0 +1,11 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "check-types": {},
+    "lint": {
+      "outputs": [".eslintcache"]
+    },
+    "format": {}
+  }
+}

@@ -28,3 +28,6 @@ changes.txt
 
 # eslint cache file
 .eslintcache
+
+# turborepo
+.turbo
