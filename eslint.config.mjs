@@ -1,22 +1,24 @@
 // @ts-check
 
-import eslint from "@eslint/js";
-import { defineConfig, globalIgnores } from "eslint/config";
+import { globalIgnores, defineConfig } from "eslint/config";
+import perfectionist from "eslint-plugin-perfectionist";
 import tseslint from "typescript-eslint";
-import eslintPluginAstro from "eslint-plugin-astro";
+import astro from "eslint-plugin-astro";
+import eslint from "@eslint/js";
 
 export default defineConfig(
   globalIgnores([".astro/"]),
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
-  ...eslintPluginAstro.configs["jsx-a11y-recommended"],
+  ...astro.configs["jsx-a11y-recommended"],
   {
     languageOptions: {
       parserOptions: {
+        tsconfigRootDir: import.meta.dirname,
         parser: "@typescript-eslint/parser",
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
       },
     },
-  }
+  },
+  perfectionist.configs["recommended-line-length"]
 );
