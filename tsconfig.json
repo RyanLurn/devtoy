@@ -1,5 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    // Strictness
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Path aliases
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }
