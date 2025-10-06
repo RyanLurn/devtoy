@@ -1,0 +1,10 @@
+pre-commit:
+  jobs:
+    - name: Format staged files
+      run: pnpm exec prettier --write {staged_files}
+      stage_fixed: true
+
+pre-push:
+  jobs:
+    - name: Check code quality
+      run: pnpm run check --ui stream

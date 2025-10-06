@@ -25,3 +25,9 @@ pnpm-debug.log*
 
 # staged changes patch file
 changes.txt
+
+# eslint cache file
+.eslintcache
+
+# turborepo
+.turbo
