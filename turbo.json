@@ -5,6 +5,7 @@
     "check-types": {
       "inputs": [
         "**/*.{js,mjs,ts,tsx,astro}",
+        "tsconfig.json",
         "!node_modules/**",
         "!dist/**",
         "!.turbo/**"
@@ -13,6 +14,7 @@
     "lint": {
       "inputs": [
         "**/*.{js,mjs,ts,tsx,astro}",
+        "tsconfig.json",
         "!node_modules/**",
         "!dist/**",
         "!.turbo/**"
@@ -22,6 +24,7 @@
     "lint:fix": {
       "inputs": [
         "**/*.{js,mjs,ts,tsx,astro}",
+        "tsconfig.json",
         "!node_modules/**",
         "!dist/**",
         "!.turbo/**"
