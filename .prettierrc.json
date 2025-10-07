@@ -4,7 +4,8 @@
   "plugins": [
     "@prettier/plugin-oxc",
     "prettier-plugin-astro",
-    "prettier-plugin-curly"
+    "prettier-plugin-curly",
+    "prettier-plugin-tailwindcss"
   ],
   "overrides": [
     {
@@ -13,5 +14,7 @@
         "parser": "astro"
       }
     }
-  ]
+  ],
+  "tailwindStylesheet": "./src/styles/global.css",
+  "tailwindFunctions": ["clsx", "cn", "twMerge", "cva"]
 }
