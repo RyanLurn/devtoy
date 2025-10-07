@@ -4,6 +4,7 @@ import { globalIgnores, defineConfig } from "eslint/config";
 import perfectionist from "eslint-plugin-perfectionist";
 import prettier from "eslint-config-prettier/flat";
 import reactHooks from "eslint-plugin-react-hooks";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 import unicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
 import astro from "eslint-plugin-astro";
@@ -43,6 +44,10 @@ export default defineConfig(
       "react-hooks": reactHooks,
     },
     extends: ["react-hooks/recommended-latest"],
+    files: ["**/*.{ts,tsx}"],
+  },
+  {
+    ...jsxA11y.flatConfigs.recommended,
     files: ["**/*.{ts,tsx}"],
   },
   prettier
