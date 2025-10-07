@@ -13,15 +13,28 @@ export default defineConfig(
   globalIgnores([".astro/"]),
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
-  ...astro.configs["jsx-a11y-recommended"],
   {
     languageOptions: {
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
-        parser: "@typescript-eslint/parser",
         projectService: true,
       },
     },
+    files: ["**/*.{js,mjs,ts,tsx}"],
+  },
+  {
+    languageOptions: {
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        extraFileExtensions: [".astro"],
+        project: true,
+      },
+    },
+    extends: ["astro/jsx-a11y-recommended"],
+    plugins: {
+      astro: astro,
+    },
+    files: ["**/*.astro"],
   },
   perfectionist.configs["recommended-line-length"],
   unicorn.configs.recommended,
