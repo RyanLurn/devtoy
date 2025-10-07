@@ -31,3 +31,7 @@ changes.txt
 
 # turborepo
 .turbo
+
+# eslint print-config result
+print.json
+print-config.json
